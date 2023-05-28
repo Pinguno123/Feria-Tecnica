@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/reseña.css">
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+	<title>Crear Reseña</title>
+</head>
+<body>
+
+	<header>
+		<div class="contenedor">
+			<h2 class="logotipo">FeriaTecnica</h2>
+			<nav>
+				<a href="Index.html">Inicio</a>
+				<a href="Peliculas.html">Peliculas</a>
+				<a href="Recientes.html">Más Recientes</a>
+				<a href="Reseña.html" class="activo">Crear Reseña</a>
+			</nav>
+			</div>
+	</header>
+
+	<main>
+		<div class="formulario-reseña">
+			<div class="contenedor">
+				<form action="/form-handler.php" target="_blank" method="post" name="creacion" autocomplete="off">
+
+					<input type="text" name="nombre" placeholder="Nombre de la pelicula" class="input-reseña" autofocus required><br>
+
+					<label for="año" class="label-formulario">Mes y año de estreno</label><br>
+					<input id="año" type="month" name="mes/año"class="input-reseña" required><br>
+
+					<label for="duracion" class="label-formulario">Duración en minutos</label><br>
+					<input id="duracion" type="number" name="duracion"class="input-reseña" min="60" required><br>
+
+					<input type="text" name="director"class="input-reseña" placeholder="Director" required><br>
+
+					<textarea name="resumen" placeholder="Resumen de la pelicula" class="input-reseña" required></textarea><br>
+
+					<input type="text" name="critica"class="input-reseña" placeholder="Critica de la pelicula" required><br>
+
+					<input type="file" name="imagen" class="input-reseña-fichero" required>
+
+					<div class="valoracion">
+						<label class="label-formulario">Valoración</label><br>
+
+						<label for="1" class="label-formulario-valoracion">1</label>
+						<input id="1" type="radio" name="valoracion">
+
+						<label for="2" class="label-formulario-valoracion">2</label>
+						<input id="2" type="radio" name="valoracion">
+
+						<label for="3" class="label-formulario-valoracion">3</label>
+						<input id="3" type="radio" name="valoracion">
+
+						<label for="4" class="label-formulario-valoracion">4</label>
+						<input id="4" type="radio" name="valoracion">
+
+						<label for="5" class="label-formulario-valoracion">5</label>
+						<input id="5" type="radio" name="valoracion"><br>
+					</div>	
+
+					<button type="submit" class="boton">Crear Reseña</button>
+					<button type="reset" class="boton">Borrar</button>
+				</form>
+			</div>
+		</div>
+	</main>
+
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
